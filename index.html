@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>This domain is taken</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --card: rgba(255,255,255,.06);
+    --border: rgba(255,255,255,.12);
+    --text: #eef1f8;
+    --muted: #9aa4bf;
+    --accent: #7c8cff;
+    --accent2: #4ee0c1;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .blob {
+    position: fixed; border-radius: 50%; filter: blur(90px); opacity: .55; z-index: 0;
+    animation: float 14s ease-in-out infinite alternate;
+  }
+  .b1 { width: 460px; height: 460px; background: #4a56e2; top: -140px; left: -120px; }
+  .b2 { width: 400px; height: 400px; background: #12b89a; bottom: -140px; right: -100px; animation-delay: -6s; }
+  .b3 { width: 260px; height: 260px; background: #a24bd8; top: 55%; left: 60%; opacity: .3; animation-delay: -3s; }
+  @keyframes float { to { transform: translate(40px, 30px) scale(1.12); } }
+
+  main {
+    position: relative; z-index: 1;
+    width: min(560px, 100%);
+    text-align: center;
+    padding: 56px 40px 44px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(0,0,0,.45);
+  }
+  .icon {
+    width: 76px; height: 76px; margin: 0 auto 28px;
+    display: grid; place-items: center;
+    border-radius: 22px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 10px 30px rgba(124,140,255,.45);
+  }
+  .icon svg { width: 38px; height: 38px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .tag {
+    display: inline-block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent2); background: rgba(78,224,193,.1);
+    border: 1px solid rgba(78,224,193,.3);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(32px, 6vw, 46px); line-height: 1.1; font-weight: 750; letter-spacing: -.02em;
+    background: linear-gradient(120deg, #fff 30%, #b9c2ff);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    margin-bottom: 16px;
+  }
+  p { color: var(--muted); font-size: 17px; line-height: 1.6; max-width: 420px; margin: 0 auto; }
+  .divider { height: 1px; background: var(--border); margin: 34px 0 24px; }
+  .foot { font-size: 14px; color: var(--muted); }
+  .foot strong { color: var(--text); font-weight: 600; }
+  @media (max-width: 480px) { main { padding: 44px 24px 34px; } }
+  @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
+</style>
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <main>
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg>
+    </div>
+    <span class="tag">Domain unavailable</span>
+    <h1>This domain is taken</h1>
+    <p>The address you're trying to reach is already registered and in use by someone else.</p>
+    <div class="divider"></div>
+    <div class="foot">Looking for something else? <strong>Try a different name or extension.</strong></div>
+  </main>
+</body>
+</html>
